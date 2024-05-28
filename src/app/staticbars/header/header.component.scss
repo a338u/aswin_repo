@@ -1,0 +1,109 @@
+// a {
+//   text-decoration: none;
+//   color: #144273;
+//   cursor: pointer;
+//   display: flex;
+//   align-items: center;
+//   font-size: 13px;
+//   gap: 2px;
+// }
+
+// a:hover {
+//   color: #A70A29;
+// }
+
+// a:active {
+//   color: #A70A29;
+// }
+
+// .header {
+//   gap: 20px;
+// }
+
+// .mat-menu-panel {
+//   padding: 0 !important;
+// }
+
+// span {
+//   font-size: 13px;
+// }
+
+// button:hover span {
+//   position: relative;
+//   left: 10px;
+//   transition: left 0.2s ease;
+//   color: #A70A29;
+// }
+
+
+// ::ng-deep .mat-mdc-menu-content {
+//   width: 200px;
+// }
+
+// .has-submenu:after {
+//   content: "\25BE";
+//   /* Unicode for the down arrow */
+//   margin-left: 5px;
+//   /* Adjust as needed */
+// }
+
+// .has-submenu:hover:after {
+//   color: red;
+//   /* Optional: Change color on hover */
+// }
+
+// .btn-border {
+//   border-bottom: 1px solid #8080804a !important;
+// }
+
+header {
+  padding: 10px 0;
+}
+
+@media screen and (max-width:990px) {
+  .nav {
+    display: none !important;
+  }
+
+  .badge {
+    display: block !important;
+  }
+
+  ::ng-deep .p-menubar.p-component {
+    flex-direction: row-reverse;
+  }
+}
+
+.badge {
+  display: none;
+}
+
+.pi-bell {
+  color: black;
+}
+
+@media screen and (max-width: 960px) {
+  ::ng-deep .p-menubar.p-menubar-mobile-active .p-menubar-root-list {
+    width: fit-content;
+  }
+}
+
+::ng-deep .p-menubar-start{
+  padding-left: 30px;
+}
+::ng-deep a {
+  text-decoration: none;
+}
+
+span.p-menuitem-text :hover {
+  transition: 2s;
+  padding-left: 20px
+}
+
+::ng-deep .p-menubar {
+  border: none;
+}
+
+::ng-deep .card {
+  border: none;
+}

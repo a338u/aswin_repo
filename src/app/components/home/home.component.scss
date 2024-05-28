@@ -1,0 +1,39 @@
+:host ::ng-deep {
+  .product-item {
+    .product-item-content {
+      border: 1px solid var(--surface-d);
+      border-radius: 3px;
+      margin: .3rem;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .product-image {
+      width: 50%;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+    }
+  }
+}
+
+::ng-deep button.p-ripple.p-element.p-button.p-component.p-button-icon-only.p-button-rounded {
+  border-radius: 50px;
+}
+
+::ng-deep .mt-5.flex.align-items-center.justify-content-center.gap-2 {
+  display: flex;
+}
+
+.topbar-image {
+  // height: 300px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.topbar-image img {
+  width: 100%;
+  position: relative;
+}
+.card-container{
+  border: 1px solid #80808073;
+  border-radius: 4px;
+}

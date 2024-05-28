@@ -1,0 +1,67 @@
+<!-- about.component.html -->
+
+<div class="container">
+  <div class="row justify-content-center align-items-center">
+    <div class="m-0 p-3 d-flex row">
+      <div class="col-lg-8">
+        <h2>About Us</h2>
+        <p class="text-justify">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod massa nec nisi
+          aliquam, nec cursus arcu viverra. Vivamus euismod mauris vitae nulla lacinia, eu
+          fermentum nisi auctor. Nunc varius, elit in congue consectetur, nisi lectus tristique
+          velit, ac tempor libero lectus vel libero. Aliquam et mauris nec arcu congue ultricies
+          vel ac turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Nullam eu vestibulum orci. Nullam vel mi vitae libero
+          ullamcorper pellentesque. Integer et ex nec libero congue feugiat. Mauris eu sagittis
+          ex, ut efficitur metus.
+        </p>
+        <p class="text-justify">
+          Proin vel volutpat mauris. Sed nec nulla ac augue pellentesque consequat. Sed at
+          pulvinar ex. Duis nec ante nisl. Phasellus at velit vel mauris dapibus consectetur.
+          Nulla nec eleifend mauris. Aenean fermentum vel velit nec facilisis. Phasellus auctor
+          laoreet nisl, nec varius odio aliquam at. Sed in orci ac justo auctor lacinia nec ut
+          dolor. Vivamus tincidunt augue vel nibh tincidunt, a pellentesque tortor bibendum.
+          Donec consectetur mi id urna dictum, eu congue nunc facilisis. Quisque quis semper
+          justo. Nulla facilisi. Integer laoreet urna a ante lobortis fermentum. Vivamus
+          commodo eros vel risus feugiat, vel tincidunt nisl varius.
+        </p>
+        <p class="text-justify">
+          Proin vel volutpat mauris. Sed nec nulla ac augue pellentesque consequat. Sed at
+          pulvinar ex. Duis nec ante nisl. Phasellus at velit vel mauris dapibus consectetur.
+          Nulla nec eleifend mauris. Aenean fermentum vel velit nec facilisis. Phasellus auctor
+          laoreet nisl, nec varius odio aliquam at. Sed in orci ac justo auctor lacinia nec ut
+          dolor. Vivamus tincidunt augue vel nibh tincidunt, a pellentesque tortor bibendum.
+          Donec consectetur mi id urna dictum, eu congue nunc facilisis. Quisque quis semper
+          justo. Nulla facilisi. Integer laoreet urna a ante lobortis fermentum. Vivamus
+          commodo eros vel risus feugiat, vel tincidunt nisl varius.
+        </p>
+        <p class="text-justify">
+          Proin vel volutpat mauris. Sed nec nulla ac augue pellentesque consequat. Sed at
+          pulvinar ex. Duis nec ante nisl. Phasellus at velit vel mauris dapibus consectetur.
+          Nulla nec eleifend mauris. Aenean fermentum vel velit nec facilisis. Phasellus auctor
+          laoreet nisl, nec varius odio aliquam at. Sed in orci ac justo auctor lacinia nec ut
+          dolor. Vivamus tincidunt augue vel nibh tincidunt, a pellentesque tortor bibendum.
+          Donec consectetur mi id urna dictum, eu congue nunc facilisis. Quisque quis semper
+          justo. Nulla facilisi. Integer laoreet urna a ante lobortis fermentum. Vivamus
+          commodo eros vel risus feugiat, vel tincidunt nisl varius.
+        </p>
+      </div>
+      <div class="col-lg-4">
+        @if(carouselItems.length > 0){
+        <ngb-carousel>
+          @for(item of carouselItems;track item.image){
+          <ng-template ngbSlide>
+            <img height="470" width="550" [src]="item.image" alt="carousel-image">
+            <div class="carousel-caption">
+              <h3>{{ item.caption }}</h3>
+            </div>
+          </ng-template>
+          }@empty {
+          No Images
+          }
+        </ngb-carousel>
+        }
+      </div>
+    </div>
+  </div>
+</div>

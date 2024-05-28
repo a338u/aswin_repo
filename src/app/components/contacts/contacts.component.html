@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row justify-content-center align-items-center">
+    <div class="m-3 p-4 d-flex row">
+      @for(contact of contacts; track contact.name){
+        <div class="col-lg-4 col-md-6 col-sm-12" [@slideInOut]>
+          <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{ contact.name }}</mat-card-title>
+            <mat-card-subtitle>{{ contact.position }}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="{{ contact.image }}" alt="{{ contact.name }}">
+          <mat-card-content>
+            <p>{{ contact.email }}</p>
+            <p>{{ contact.phone }}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button (click)="openDetails(contact)">View Details</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      }@empty {
+        No Data
+      }
+    </div>
+  </div>
+</div>

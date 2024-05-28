@@ -1,0 +1,10 @@
+/* locations.component.scss */
+.card-container {
+  display: flex;
+  flex-direction: column; /* Display cards in a column */
+  gap: 16px;
+}
+
+.example-card {
+  width: 300px;
+}

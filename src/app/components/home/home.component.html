@@ -1,0 +1,25 @@
+<div class="topbar-image p-2 m-2">
+  <img src="https://img.freepik.com/free-psd/interior-view-operating-room-generative-ai_587448-1909.jpg?w=1060&t=st=1708240799~exp=1708241399~hmac=56dc25dced381a65a7985507bed74ea02b80b75713017c359c88dfdee435ad9b" alt="" class="w-100 shadow-2">
+</div>
+<div class="container">
+  <p-carousel [value]="products" [numVisible]="3" [numScroll]="1" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
+    <ng-template let-product pTemplate="item">
+      <div class="p-col-12 p-md-4 p-lg-4">
+        <div class="border-1 card-container surface-border border-round m-2 text-center py-4 px-3 p-2">
+          <div class="mb-3 p-2">
+            <img src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" [alt]="product.name" class="w-100 shadow-2 p-2" />
+          </div>
+          <div class="p-2">
+            <h4 class="mb-1">{{ product.name }}</h4>
+            <h6 class="mt-0 mb-3">{{ '$' + product.price }}</h6>
+            <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag>
+            <div class="mt-5 flex align-items-center justify-content-center gap-2 p-2">
+              <p-button icon="pi pi-search" [rounded]="true"></p-button>
+              <p-button icon="pi pi-star-fill" [rounded]="true" severity="secondary"></p-button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>
